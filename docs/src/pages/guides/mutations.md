@@ -154,25 +154,25 @@ You might find that you want to **trigger additional callbacks** then the ones d
 ```js
 useMutation(addTodo, {
   onSuccess: (data, variables, context) => {
-    // I will fire first
+    // I will fire second!
   },
   onError: (error, variables, context) => {
-    // I will fire first
+    // I will fire second!
   },
   onSettled: (data, error, variables, context) => {
-    // I will fire first
+    // I will fire second!
   },
 })
 
 mutate(todo, {
   onSuccess: (data, variables, context) => {
-    // I will fire second!
+    // I will fire first
   },
   onError: (error, variables, context) => {
-    // I will fire second!
+    // I will fire first
   },
   onSettled: (data, error, variables, context) => {
-    // I will fire second!
+    // I will fire first
   },
 })
 ```
